@@ -2,7 +2,11 @@
  - hosts: demo
    become: true
    tasks:
-     - name: installing maven & wget
+     - name: installing wget
        yum:
-        name: git && wget
+        name: wget 
+        state: present
+     - name: installing maven
+       yum:
+        name: maven
         state: present
