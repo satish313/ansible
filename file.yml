@@ -1,0 +1,8 @@
+---
+ - hosts: demo  
+   become: true
+   tasks:
+     - name: creating a file
+       file:
+         path: /home/file.txt
+         state: touch
