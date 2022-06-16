@@ -1,0 +1,9 @@
+---
+ - hosts: tomcat
+   become: true
+   tasks:
+     - name: deploying war file into tomcat server
+       copy:
+          src: /home/ansible/jenkins/workspace/ci-cd/gameoflife-web/target/gameoflife.war
+          dest: /root/apache-tomcat-8.5.79/webapps
+       remote_src: no
