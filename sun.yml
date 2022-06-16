@@ -6,4 +6,4 @@
        copy:
           src: /home/ansible/jenkins/workspace/ci-cd/gameoflife-web/target/gameoflife.war
           dest: /root/apache-tomcat-8.5.79/webapps
-       remote_src: no
+          remote_src: no
